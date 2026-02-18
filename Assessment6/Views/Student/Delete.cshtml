@@ -1,0 +1,8 @@
+@model Assessment6.Models.Student
+
+<p>Delete @Model.Name?</p>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit">Delete</button>
+</form>

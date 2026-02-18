@@ -1,0 +1,36 @@
+@model Assessment7.Models.Student
+
+@{
+    ViewData["Title"] = "Create Student";
+}
+
+<h2>Add Student</h2>
+
+<form asp-action="Create" method="post">
+
+    <div class="mb-3">
+        <label>Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Email</label>
+        <input asp-for="Email" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Age</label>
+        <input asp-for="Age" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label>Marks</label>
+        <input asp-for="Marks" class="form-control" />
+    </div>
+
+    <br />
+
+    <button type="submit" class="btn btn-success">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Back</a>
+
+</form>

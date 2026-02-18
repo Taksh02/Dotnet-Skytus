@@ -1,0 +1,29 @@
+@model IEnumerable<Assessment7.Models.Student>
+
+<h2>Student List (Marks >= 50)</h2>
+<a asp-action="Create" asp-controller="Home" class="btn btn-primary">
+    Add Student
+</a>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Marks</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Name</td>
+                <td>@student.Email</td>
+                <td>@student.Age</td>
+                <td>@student.Marks</td>
+            </tr>
+        }
+    </tbody>
+</table>
